@@ -1,0 +1,19 @@
+name: 'Mihari'
+description: 'A GitHub Action to run Mihari'
+author: 'ninoseki'
+inputs:
+  mihari-command:
+    description: 'Mihari command'
+    required: true
+    default: 'help'
+  mihari-argument:
+    description: 'Mihari command argument'
+    required: false
+outputs:
+  mihari-result:
+    description: 'Mihari result'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.mihari-command }} ${{ inputs.mihari-argument }}
