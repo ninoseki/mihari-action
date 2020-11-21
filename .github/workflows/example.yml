@@ -13,7 +13,8 @@ jobs:
       id: mihari
       uses: ninoseki/mihari-action@main
       with:
-        mihari-command: 'shodan'
-        mihari-argument: 'hostname:one.one.one.one'
+        command: 'shodan'
+        input: 'hostname:one.one.one.one'
+        options: '--tag test'
     - name: Get the output
       run: echo "${{ steps.mihari.outputs.mihari-result }}"
