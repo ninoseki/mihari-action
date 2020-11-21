@@ -4,25 +4,30 @@ This action runs [Mihari](https://github.com/ninoseki/mihari).
 
 ## Inputs
 
-### `mihari-command`
+### `command`
 
 **Required** A command for Mihari. Default `help`.
 
-### `mihari-argument`
+### `input`
 
-**Optional** An argument for Mihari.
+**Optional** An input for a Mihari command.
+
+### `options`
+
+**Optional** Options for a Mihari command.
 
 ## Outputs
 
-### `mihari-result`
+### `result`
 
-A result of the Mihari command.
+A result of a Mihari command.
 
 ## Example usage
 
 ```yaml
-uses: ninoseki/mihari-action@master
+uses: ninoseki/mihari-action@main
 with:
-  mihari-command: shodan
-  mihari-argument: hostname:one.one.one.one
+  command: 'shodan'
+  input: 'hostname:one.one.one.one'
+  options: '--tags test'
 ```
