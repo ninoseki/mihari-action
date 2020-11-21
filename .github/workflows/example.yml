@@ -1,3 +1,5 @@
+name: Mihari
+
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -9,7 +11,7 @@ jobs:
     steps:
     - name: Run Mihari
       id: mihari
-      uses: ninoseki/mihari-actionp@master
+      uses: ninoseki/mihari-action@main
       with:
         mihari-command: 'shodan'
         mihari-argument: 'hostname:one.one.one.one'
